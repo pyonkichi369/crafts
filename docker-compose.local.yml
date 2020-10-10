@@ -13,10 +13,10 @@ services:
   database:
     image: mysql:5.7
     environment:
-      MYSQL_DATABASE: pyonkichi
-      MYSQL_USER: pyonkichi_user
-      MYSQL_PASSWORD: password
-      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: crafts
+      MYSQL_USER: crafts_admin
+      MYSQL_PASSWORD: Br2scw2D0THdvKzp
+      MYSQL_ROOT_PASSWORD: Br2scw2D0THdvKzp
     ports:
       - 3306:3306
     volumes:
