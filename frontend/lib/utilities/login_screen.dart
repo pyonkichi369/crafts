@@ -146,14 +146,7 @@ class _LoginScreenState extends State<LoginScreen>
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
-                  "Awesome",
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 20.0,
-                  ),
-                ),
-                Text(
-                  "App",
+                  "Crafts",
                   style: TextStyle(
                       color: Colors.white,
                       fontSize: 20.0,
@@ -302,11 +295,11 @@ class _LoginScreenState extends State<LoginScreen>
               children: <Widget>[
                 new Expanded(
                   child: TextField(
-                    obscureText: true,
+                    obscureText: false,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'samarthagarwal@live.com',
+                      hintText: 'crafts@sample.com',
                       hintStyle: TextStyle(color: Colors.grey),
                     ),
                   ),
@@ -635,11 +628,11 @@ class _LoginScreenState extends State<LoginScreen>
               children: <Widget>[
                 new Expanded(
                   child: TextField(
-                    obscureText: true,
+                    obscureText: false,
                     textAlign: TextAlign.left,
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      hintText: 'samarthagarwal@live.com',
+                      hintText: 'crafts@sample.com',
                       hintStyle: TextStyle(color: Colors.grey),
                     ),
                   ),
