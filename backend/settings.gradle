@@ -9,6 +9,8 @@
 
 rootProject.name = 'backend'
 
-include 'api'
-include 'domain'
-include 'infrastructure'
+include ':application'
+include ':database'
+include ':domain'
+include ':infrastructure'
+include ':presentation'
