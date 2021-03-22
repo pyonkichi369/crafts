@@ -4,7 +4,7 @@ services:
   backend:
     image: openjdk:14-slim
     ports:
-      - 8080:8080
+      - 9000:9000
     tty: true
     volumes:
       - ./backend:/backend:cached
