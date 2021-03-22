@@ -26,3 +26,4 @@ out/
 ### VS Code ###
 .vscode/
 .idea
+.DS_Store
