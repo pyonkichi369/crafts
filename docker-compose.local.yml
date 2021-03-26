@@ -1,18 +1,37 @@
+# https://qiita.com/A-Kira/items/beaf79a0d39d9839e61e
 version: '3.8'
 
 services:
+  nginx:
+    image: nginx:1.15.6
+    ports:
+      - '8000:80'
+    depends_on:
+      - frontend
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - .:/var/www/html
+
   backend:
     image: openjdk:14-slim
     ports:
-      - 9000:9000
+      - 8080:8080
     tty: true
     volumes:
       - ./backend:/backend:cached
     working_dir: /backend
 
+  frontend:
+    build: ./docker/php
+    volumes:
+      - .:/var/www/html
+    depends_on:
+      - database
+
   database:
     image: mysql:5.7
     environment:
+      TZ: 'Asia/Tokyo'
       MYSQL_DATABASE: crafts
       MYSQL_USER: crafts_admin
       MYSQL_PASSWORD: Br2scw2D0THdvKzp
