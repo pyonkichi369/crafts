@@ -1,6 +1,11 @@
 # https://qiita.com/A-Kira/items/beaf79a0d39d9839e61e
 version: '3.8'
 
+x-app-config:
+  &app-config
+  TZ: Asia/Tokyo
+  SPRING_PROFILES_ACTIVE: local
+
 services:
   nginx:
     image: nginx:1.15.6
@@ -16,6 +21,15 @@ services:
     image: openjdk:14-slim
     ports:
       - 8080:8080
+    environment:
+      <<: *app-config
+    restart:
+      always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
     tty: true
     volumes:
       - ./backend:/backend:cached

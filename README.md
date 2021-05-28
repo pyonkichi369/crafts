@@ -1,9 +1,8 @@
-# crafts
-## backend
-```
-$ docker exec -it crafts_backend_1 bash
+# ABOUT
+crafts - Handmade x Matching
 
-$ ./gradlew build
-
-$ java -jar presentation/build/libs/presentation.jar
+# HOW TO START APP CONTAINER
+```shell
+# Run the application container.
+$ docker-compose -f docker-compose.local.yml up -d
 ```
